@@ -41,7 +41,7 @@ public class CommandHandler {
                 System.out.println("Ticket #:" + booked.getBookingId());
                 break;
             }
-            case "AVAILABLE": {
+            case "AVAILABILITY": {
                 if (params.length != 1) throw new IllegalArgumentException("AVAILABLE command require 1 argument");
                 Integer showNumber = Integer.valueOf(params[0]);
                 Command<List<String>, Show> available = new Available(showNumber);

@@ -9,7 +9,7 @@
     2. `View <Show Number>`
   -  Buyer – The users should be able retrieve list of available seats for a show, select 1 or more seats , buy and cancel tickets.
   - Commands to be implemented for Buyer:
-    1. `Available <Show Number>`
+    1. `Availability <Show Number>`
        (To list all available seat numbers for a show. E,g A1, F4 etc)
     2. `Book <Show Number> <Phone#> <Comma separated list of seats>`
        (To book a ticket. This must generate a unique ticket # and display)

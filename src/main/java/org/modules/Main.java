@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Supported Commands:");
         System.out.println("1. Setup <Show Number> <Number of Rows> <Number of Seats per row> <Cancellataion Window in Minutes>");
         System.out.println("2. View <Show Number>");
-        System.out.println("3. Available <Show Number>");
+        System.out.println("3. Availability <Show Number>");
         System.out.println("4. Book <Show Number> <Phone #> <Comma separated list of seats>");
         System.out.println("5. Cancel <Ticket #> <Phone #>");
         System.out.println("====");
