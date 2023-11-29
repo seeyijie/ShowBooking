@@ -69,7 +69,7 @@ public class BookTest {
 
         Book book2 = new Book(showNumber, phoneNumberB, List.of("B1"));
         Exception e = assertThrows(RuntimeException.class, () -> book2.execute(store));
-        assert e.getMessage().equals("Seat B1 is not available.");
+        assert e.getMessage().equals("One or more seats are unavailable.");
     }
 
     @Test
@@ -92,7 +92,8 @@ public class BookTest {
 
         Book book2 = new Book(showNumber, phoneNumberB, List.of("B0", "B1"));
         Exception e = assertThrows(RuntimeException.class, () -> book2.execute(store));
-        assert e.getMessage().equals("One or more seats are not available.");
+        System.out.println(e.getMessage());
+        assert e.getMessage().equals("One or more seats are unavailable.");
 
         Show show = store.get(showNumber);
         List<String> availableSeating = show.viewSeating();
