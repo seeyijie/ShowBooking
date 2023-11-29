@@ -1,6 +1,5 @@
 package org.modules.command;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.modules.InMemShowStore;
 import org.modules.Show;
@@ -11,12 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CancelTest {
-    private static InMemShowStore showStore;
-
-    @BeforeAll
-    public static void setUp() {
-        showStore = new InMemShowStore();
-    }
+    private static final InMemShowStore showStore = new InMemShowStore();
 
     @Test
     public void testExecuteGivenNoShowNumber() {

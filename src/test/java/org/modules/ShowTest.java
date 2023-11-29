@@ -3,8 +3,6 @@ package org.modules;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.modules.Booking;
-import org.modules.Show;
 
 import java.util.List;
 import java.util.UUID;

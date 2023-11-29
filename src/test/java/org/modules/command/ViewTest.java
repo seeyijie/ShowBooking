@@ -1,6 +1,5 @@
 package org.modules.command;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.modules.InMemShowStore;
 import org.modules.Show;
@@ -8,11 +7,7 @@ import org.modules.Show;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ViewTest {
-    private static InMemShowStore store;
-    @BeforeAll
-    public static void setup() {
-        store = new InMemShowStore();
-    }
+    private static final InMemShowStore store = new InMemShowStore();
 
     @Test
     public void testViewGivenShowNumberDoesNotExist() {

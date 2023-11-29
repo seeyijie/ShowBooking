@@ -1,20 +1,13 @@
 package org.modules.command;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.modules.InMemShowStore;
 import org.modules.Show;
-import org.modules.command.Setup;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SetupTest {
-    private static InMemShowStore store;
-
-    @BeforeAll
-    public static void setup() {
-        store = new InMemShowStore();
-    }
+    private static final InMemShowStore store = new InMemShowStore();
 
     @Test
     public void testExecute() {

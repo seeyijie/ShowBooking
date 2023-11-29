@@ -1,6 +1,5 @@
 package org.modules.command;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.modules.Booking;
 import org.modules.InMemShowStore;
@@ -12,12 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BookTest {
-    private static InMemShowStore store;
-
-    @BeforeAll
-    public static void setup() {
-        store = new InMemShowStore();
-    }
+    private static final InMemShowStore store = new InMemShowStore();
 
     @Test
     public void testBookGivenNoShowNumberFound() {
