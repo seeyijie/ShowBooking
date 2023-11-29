@@ -1,4 +1,7 @@
-package org.modules;
+package org.modules.store;
+
+import org.modules.Booking;
+import org.modules.Store;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,6 +24,7 @@ public class InMemBookingStore implements Store<Booking> {
         return booking;
     }
 
+    @Override
     public Boolean remove(String bookingId) {
         if (bookingMap.containsKey(bookingId)) {
             bookingMap.remove(bookingId);

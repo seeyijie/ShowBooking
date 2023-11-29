@@ -1,4 +1,7 @@
-package org.modules;
+package org.modules.store;
+
+import org.modules.Show;
+import org.modules.Store;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +20,11 @@ public class InMemShowStore implements Store<Show> {
         }
         showMap.put(showNumber, show);
         return show;
+    }
+
+    @Override
+    public Boolean remove(String key) {
+        throw new Error("Not required");
     }
 
     @Override

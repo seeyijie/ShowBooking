@@ -1,7 +1,7 @@
 package org.modules.command;
 
 import org.junit.jupiter.api.Test;
-import org.modules.InMemShowStore;
+import org.modules.store.InMemShowStore;
 import org.modules.Show;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;

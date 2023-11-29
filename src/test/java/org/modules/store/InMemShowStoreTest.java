@@ -1,6 +1,8 @@
-package org.modules;
+package org.modules.store;
 
 import org.junit.jupiter.api.Test;
+import org.modules.Show;
+import org.modules.store.InMemShowStore;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

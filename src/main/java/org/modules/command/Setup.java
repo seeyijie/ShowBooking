@@ -15,7 +15,6 @@ public class Setup implements Command<Show, Show> {
         this.seatsPerRow = show.getSeatsPerRow();
         this.cancellationWindow = show.getCancellationWindow();
     }
-
     @Override
     public Show execute(Store<Show> store) {
         Show show = new Show(showNumber, numOfRows, seatsPerRow, cancellationWindow);

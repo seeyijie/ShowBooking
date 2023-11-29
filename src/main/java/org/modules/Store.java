@@ -11,4 +11,6 @@ public interface Store<T> {
 
     T get(String key);
 
+    Boolean remove(String key);
+
 }

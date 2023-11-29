@@ -66,15 +66,16 @@ public class Show {
     }
 
     public Booking putBooking(Integer phoneNumber, List<String> seatNumberList, Show show) {
+        boolean isValidAvailableSeats = validateSeatAvailability(seatNumberList, show);
+        if (!isValidAvailableSeats) {
+            throw new RuntimeException("One or more seats are unavailable.");
+        }
         try {
             Booking booking = new Booking(this.showNumber, seatNumberList, show);
             for (String s : seatNumberList) {
                 char rowChar = s.charAt(0);
                 int seatNum = Integer.parseInt(String.valueOf(s.charAt(1)));
                 int rowIndex = mapLetterToNumber(rowChar);
-                if (!this.seats[rowIndex][seatNum]) {
-                    throw new RuntimeException("Seat " + s + " is not available.");
-                }
                 this.seats[rowIndex][seatNum] = false;
                 this.phoneToBookingMap.put(phoneNumber, booking);
             }
@@ -82,6 +83,21 @@ public class Show {
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    private boolean validateSeatAvailability(List<String> seatNumberList, Show show) {
+        for (String s : seatNumberList) {
+            char rowChar = s.charAt(0);
+            int seatNum = Integer.parseInt(String.valueOf(s.charAt(1)));
+            int rowIndex = mapLetterToNumber(rowChar);
+            if (seatNum >= show.getSeatsPerRow() || rowIndex >= show.getNumOfRows()) {
+                return false;
+            }
+            if (!this.seats[rowIndex][seatNum]) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public Booking getBooking(Integer phoneNumber) {

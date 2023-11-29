@@ -78,7 +78,7 @@ public class ShowTest {
     public void testPutBookingWithInvalidSeatNumber() {
         Show show = new Show(1, 3, 3, 1);
         Exception e = assertThrows(Exception.class, () -> show.putBooking(91231234, List.of("A3"), show));
-        assertEquals("Invalid seat number", e.getMessage());
+        assertEquals("One or more seats are unavailable.", e.getMessage());
         assertNull(show.getBooking(91231234));
     }
 

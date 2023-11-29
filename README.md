@@ -24,7 +24,6 @@
 # Assumptions:
 - Data structures used need not be thread safe.
 - Country code is not required for phone number and no phone number starts with 0.
-- In the event where there are more than 1 seats unavailable, the first unavailable seat will be printed out. 
 
 # How to run:
 1. `mvn package -f pom.xml`

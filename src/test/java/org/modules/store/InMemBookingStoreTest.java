@@ -1,6 +1,9 @@
-package org.modules;
+package org.modules.store;
 
 import org.junit.jupiter.api.Test;
+import org.modules.Booking;
+import org.modules.Show;
+import org.modules.store.InMemBookingStore;
 
 import java.util.List;
 import java.util.UUID;
